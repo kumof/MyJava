@@ -1,16 +1,23 @@
 package com.fomuk;
 
-/**
- * Created by fomuk on 29.11.2015.
- */
 public class Main {
 
-    static final int CONST = 77;
+    static  Cat cat = new Cat();
+    static People people=new People();
 
     public static void main(String[] args) {
-        System.out.println(CONST);
-        System.out.println(CONST);
+        cat.name="Barsic";
+        cat.breed="Buldog";
+        cat.age=5;
+
+        people.name="Andrew";
+        people.lastName="Fomuk";
+        people.age=43;
+        people.cat=cat;
+
+        System.out.println(people);
+        cat.say();
+        people.cat.say();
 
     }
-
 }
