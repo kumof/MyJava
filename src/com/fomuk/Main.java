@@ -1,23 +1,26 @@
 package com.fomuk;
 
+import com.fomuk.devcat.Cat;
+import com.fomuk.devpeople.People;
+
 public class Main {
 
-    static  Cat cat = new Cat();
+    static Cat cat = new Cat();
     static People people=new People();
 
     public static void main(String[] args) {
-        cat.name="Barsic";
-        cat.breed="Buldog";
-        cat.age=5;
+        cat.setName("Barsic");
+        cat.setBreed("Buldog");
+        cat.setAge(5);
 
-        people.name="Andrew";
-        people.lastName="Fomuk";
-        people.age=43;
-        people.cat=cat;
+        people.setName("Andrew");
+        people.setLastName("Fomuk");
+        people.setAge(43);
+        people.setCat(cat);
 
         System.out.println(people);
         cat.say();
-        people.cat.say();
+        people.getCat().say();
 
     }
 }
